@@ -19,7 +19,7 @@ export default {
   globals: {
     react: 'React',
     glamor: 'Glamor',
-    glamorous: 'Glamorous'
+    glamorous: 'glamorous'
   },
   plugins: [
     nodeResolve({jsnext: true, main: true}),
