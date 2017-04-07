@@ -7,10 +7,12 @@ const minify = process.env.MINIFY
 
 export default {
   entry: 'index.js',
-  targets: [
-    {dest: 'dist/glamorous-jsxstyle.umd.js', format: 'umd'},
-    {dest: 'dist/glamorous-jsxstyle.es.js', format: 'es'},
-    {dest: 'dist/glamorous-jsxstyle.cjs.js', format: 'cjs'}
+  targets: minify ?
+    [{dest: 'dist/glamorous-jsxstyle.umd.min.js', format: 'umd'}] :
+  [
+        {dest: 'dist/glamorous-jsxstyle.umd.js', format: 'umd'},
+        {dest: 'dist/glamorous-jsxstyle.es.js', format: 'es'},
+        {dest: 'dist/glamorous-jsxstyle.cjs.js', format: 'cjs'}
   ],
   exports: 'default',
   moduleName: 'glamorous-jsxstyle',
@@ -27,7 +29,7 @@ export default {
     rollupBabel({
       exclude: 'node_modules/**',
       babelrc: false,
-      presets: ['stage-2', 'react']
+      presets: [['env', {modules: false}], 'stage-2', 'react']
     }),
     minify ? uglify() : null
   ].filter(Boolean)
