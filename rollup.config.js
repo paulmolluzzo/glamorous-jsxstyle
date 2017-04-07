@@ -14,7 +14,7 @@ export default {
         {dest: 'dist/glamorous-jsxstyle.es.js', format: 'es'},
         {dest: 'dist/glamorous-jsxstyle.cjs.js', format: 'cjs'}
   ],
-  exports: 'default',
+  exports: 'auto',
   moduleName: 'glamorous-jsxstyle',
   format: 'umd',
   external: ['react', 'glamor', 'glamorous'],
