@@ -10,6 +10,7 @@
   },
   "scripts": {
     "postinstall": "npm run build && npm run build:min",
+    "prebuild": "rimraf dist",
     "build": "rollup --config",
     "build:min": "rollup --config --sourcemap --environment MINIFY",
     "test": "xo"
@@ -42,6 +43,7 @@
     "eslint-plugin-react": "^6.10.3",
     "glamor": "^2.20.24",
     "react": "^15.4.2",
+    "rimraf": "^2.6.1",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",
