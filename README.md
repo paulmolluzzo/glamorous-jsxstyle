@@ -16,7 +16,7 @@ This also has peer dependencies of `react` and `glamor`, so install those too:
 You can then use one of the module formats:
 
 * `main`: dist/glamorous-jsxstyle.cjs.js - exports itself as a CommonJS module
-* `global`: dist/glamorous-jsxstyle.umd.js - exports itself as a `umd` module.
+* `global`: dist/glamorous-jsxstyle.umd.js and dist/glamorous-jsxstyle.umd.min.js  - exports itself as a `umd` module.
 * `jsnext:main` and `module`: dist/glamorous-jsxstyle.es.js - exports itself using the ES modules specification, you'll need to configure `webpack` to make use of this file.
 
 # Usage
