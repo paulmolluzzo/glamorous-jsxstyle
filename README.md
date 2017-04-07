@@ -1,6 +1,30 @@
 # jsxstyle Components
 
-This package exports jsxstyle components generated with [`glamorous`](https://github.com/paypal/glamorous/)
+This package exports the components from [`jsxstyle`](https://github.com/smyte/jsxstyle) using [`glamorous`](https://github.com/paypal/glamorous/).
+
+From [`jsxstyle`](https://github.com/smyte/jsxstyle):
+
+> `jsxstyle` includes components corresponding to every potential value of the CSS `display` property.
+
+This package follows that same purpose and generates and exposes components named after `display` properties. The list of components generated are:
+
+* `View`
+* `Block`
+* `InlineBlock`
+* `InlineListItem`
+* `Flex`
+* `Row`
+* `Column`
+* `Table`
+* `InlineTable`
+* `TableRowGroup`
+* `TableHeaderGroup`
+* `TableFooterGroup`
+* `TableRow`
+* `TableCell`
+* `TableColumnGroup`
+* `TableColumn`
+* `TableCaption`
 
 # Install
 
