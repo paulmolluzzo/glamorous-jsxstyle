@@ -1,4 +1,4 @@
-# jsxstyle Components
+# `glamorous-jsxstyle` Components
 
 This package exports the components from [`jsxstyle`](https://github.com/smyte/jsxstyle) using [`glamorous`](https://github.com/paypal/glamorous/).
 
@@ -85,6 +85,37 @@ export default class Example extends React.Component {
 }
 
 ```
+
+You can also extend the `glamorous-jsxstyle` components using `glamorous` with additional style objects:
+
+```js
+const headerBG = { background: '#ddd' }
+const headerCell = { minWidth: '200px' }
+
+// use `glamorous` dynamic functions to style relative to `props`
+// alternate gray and white
+const alternatingRows = props => ({ background: props.rowNumber % 2 ? 'gray' : 'white' })
+
+// underline every 5th row
+const everyFifth = props => ({ textDecoration: props.rowNumber % 5 ? 'underline' : '' })
+
+// extend with 1 or more style objects
+const HeaderRow = glamorous(TableRow)(headerBG)
+const HeaderCell = glamorous(TableCell)(headerCell, centeredText)
+const BodyRow = glamorous(TableRow)(alternatingRows, everyFifth)
+
+export default () => (
+  <div>
+    <HeaderRow>
+      <HeaderCell>Heading 1</HeaderCell>
+      <HeaderCell>Heading 2</HeaderCell>
+      <HeaderCell>Heading 3</HeaderCell>
+    </HeaderRow>
+  </div>
+)
+```
+
+[See an example of a `table` made with `glamorous-jsxstyle` here](https://glamorous-jsxstyle-table-gbivoatqvy.now.sh).
 
 ---
 
