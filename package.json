@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "rollup --config && build:min",
+    "build": "rollup --config && npm run build:min",
     "build:min": "rollup --config --sourcemap --environment MINIFY",
     "test": "xo"
   },
