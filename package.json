@@ -1,6 +1,6 @@
 {
   "name": "glamorous-jsxstyle",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "description": "jsxstyle components created with glamorous",
   "main": "dist/glamorous-jsxstyle.cjs.js",
   "jsnext:main": "dist/glamorous-jsxstyle.es.js",
