@@ -29,7 +29,7 @@
   "author": "Paul Molluzzo <paul@molluzzo.com> (https://paul.molluzzo.com)",
   "license": "MIT",
   "dependencies": {
-    "glamorous": "^1.0.1"
+    "glamorous": "^3.7.1"
   },
   "peerDependencies": {
     "glamor": ">=2",
